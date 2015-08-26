@@ -2,10 +2,12 @@ import React from 'react';
 import Graph from './Graph';
 import Editor from './Editor';
 
+const SAMPLE_DEFINITION = `graph TD;\n\tA-->B;\n\tA-->C;`;
+
 export default React.createClass({
   getInitialState() {
     return {
-      definition: `graph TD;\n\tA-->B;\n\tA-->C;`
+      definition: SAMPLE_DEFINITION
     };
   },
 

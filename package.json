@@ -1,8 +1,8 @@
 {
   "name": "charter",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
-  "author": "Jane Doe",
+  "author": "Rob Hurring",
   "license": "MIT",
   "dependencies": {
     "babelify": "^6.2.0",
