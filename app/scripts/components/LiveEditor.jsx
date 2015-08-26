@@ -18,10 +18,14 @@ export default React.createClass({
       <div className="container">
         <div className="row">
           <div className="col-xs-4">
-            <Editor defaultValue={this.state.definition} onChange={this.updateDefinition} />
+            <Editor
+              defaultValue={this.state.definition}
+              onChange={this.updateDefinition} />
           </div>
           <div className="col-xs-8">
-            <Graph definition={this.state.definition} />
+            <div className="well well-lg">
+              <Graph definition={this.state.definition} />
+            </div>
           </div>
         </div>
       </div>
