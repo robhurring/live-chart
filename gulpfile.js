@@ -7,6 +7,7 @@ var browserify    = require('browserify');
 var preprocessify = require('preprocessify');
 var runSequence   = require('run-sequence');
 var domain        = require('domain');
+var ghPages = require('gulp-gh-pages');
 
 var env           = 'dev';
 var webserver     = false;
@@ -21,6 +22,11 @@ log = function(task, start) {
     $.util.log('Finished', '\'' + $.util.colors.cyan(task) + '\'', 'after', $.util.colors.magenta(time));
   }
 };
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
 
 gulp.task('clean:dev', function() {
   return del(['.tmp']);
