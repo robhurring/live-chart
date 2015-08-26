@@ -24,6 +24,10 @@ log = function(task, start) {
 };
 
 gulp.task('deploy', function() {
+  runSequence('build', 'pages');
+});
+
+gulp.task('pages', function() {
   return gulp.src('./dist/**/*')
     .pipe(ghPages());
 });
